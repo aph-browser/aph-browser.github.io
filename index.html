@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aph — a workspaces-first browser</title>
+<meta name="description" content="Aph is a Firefox-based, workspaces-first browser: workspaces, command palette, tab archive, and hardened privacy defaults. Beta for Linux and Windows.">
+<link rel="icon" href="aph.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#"><img src="aph.png" alt="Aph logo" width="28" height="28"> Aph</a>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#install">Install</a>
+    <a href="https://github.com/aph-browser/aph">Code</a>
+    <a href="https://github.com/aph-browser/aph/issues">Issues</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <img src="aph.png" alt="Aph logo" width="96" height="96">
+    <h1>Aph</h1>
+    <p class="tagline">A Firefox-based, workspaces-first browser.</p>
+    <p class="sub">Native workspace management, a command palette, tab archiving, and hardened privacy defaults — injected into stock Firefox. No fork, no recompilation.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/aph-browser/aph/releases/latest">Download beta</a>
+      <a class="btn" href="https://github.com/aph-browser/aph#install">Install guide</a>
+    </div>
+    <p class="beta">Beta: unsigned builds, manual re-downloads per release. Windows shows a SmartScreen warning on first launch — expected.</p>
+  </section>
+
+  <section id="install" class="panel">
+    <h2>Get it</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Linux · AppImage</h3>
+        <p><code>chmod +x aph-x86_64.AppImage</code></p>
+        <a class="btn small" href="https://github.com/aph-browser/aph/releases/latest/download/aph-x86_64.AppImage">Download AppImage</a>
+      </div>
+      <div class="card">
+        <h3>Linux · Flatpak</h3>
+        <p><code>flatpak install aph-x86_64.flatpak</code></p>
+        <a class="btn small" href="https://github.com/aph-browser/aph/releases/latest/download/aph-x86_64.flatpak">Download Flatpak</a>
+      </div>
+      <div class="card">
+        <h3>Windows</h3>
+        <p>Per-user installer, or portable ZIP + <code>aph.bat</code>.</p>
+        <a class="btn small" href="https://github.com/aph-browser/aph/releases/latest">Get for Windows</a>
+      </div>
+    </div>
+    <p class="verify">Verify with <code>SHA256SUMS</code>: <code>sha256sum -c SHA256SUMS</code> · <a href="https://github.com/aph-browser/aph/releases/latest">all releases</a></p>
+  </section>
+
+  <section id="features" class="panel">
+    <h2>Features</h2>
+    <ul class="features">
+      <li><strong>Workspaces 1–9</strong> — <code>Alt+Shift+1..9</code> to jump, <code>]</code>/<code>[</code> to cycle, <code>Tab</code> for last-used. Exclusive model: one workspace renders in at most one window.</li>
+      <li><strong>Command palette</strong> — workspace actions, tab/bookmark/history/archive search.</li>
+      <li><strong>Tab archive</strong> — park tabs away with workspace + container restore and auto-sweep.</li>
+      <li><strong>Tree tabs &amp; groups</strong> — automatic hierarchy plus native tab groups inside workspaces.</li>
+      <li><strong>Container bindings</strong> — bind a workspace to a Firefox container; new tabs open there.</li>
+      <li><strong>Privacy defaults</strong> — telemetry, health reports, Normandy, and activity-stream telemetry off. Your edits persist (seed-once prefs).</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>Report a bug</h2>
+    <p>File issues on <a href="https://github.com/aph-browser/aph/issues">GitHub Issues</a>. For workspace bugs, paste the output of these two Browser Console (<code>Ctrl+Shift+J</code>) commands:</p>
+    <pre><code>Services.wm.getMostRecentWindow("navigator:browser").AphWorkspaces.debugSession()
+Services.wm.getMostRecentWindow("navigator:browser").AphWorkspaces.debugExclusive()</code></pre>
+  </section>
+</main>
+
+<footer>
+  <p>Aph is <a href="https://github.com/aph-browser/aph/blob/main/LICENSE">MPL-2.0</a> · <a href="https://github.com/aph-browser/aph">Code</a> · <a href="https://github.com/aph-browser/aph/blob/main/SECURITY.md">Security</a></p>
+</footer>
+</body>
+</html>

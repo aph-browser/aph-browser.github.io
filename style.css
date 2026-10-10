@@ -53,6 +53,162 @@ main { max-width: 960px; margin: 0 auto; padding: 0 20px 40px; }
 
 .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
+/* Chrome mock: a static CSS sketch of the Aph window (floating bar,
+   vertical strip with workspace dock, content card). Product hues:
+   blue current, orange/amber rest — color = workspace at a glance. */
+.shot { padding: 8px 0 8px; }
+
+.mock {
+  background: #0e0f14;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 12px;
+  color: #e8e8ec;
+  font-size: 13px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+}
+
+.mock-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #16171e;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 6px 12px;
+  margin-bottom: 8px;
+}
+
+.mock-nav { opacity: 0.8; padding: 0 6px; font-size: 15px; }
+
+.mock-url {
+  flex: 1;
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+  background: #1d1e29;
+  border-radius: 8px;
+  padding: 4px 12px;
+  color: #a3a8ba;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* the Aph tile: near-black like branding/aph.svg, faint ring to hold an edge */
+.mock-aph {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: #0a0a0e;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.09);
+  flex: none;
+}
+
+.mock-main { display: flex; gap: 12px; }
+
+.mock-strip { display: flex; flex-direction: column; gap: 4px; width: 190px; flex: none; }
+
+.mock-tab {
+  border-radius: 10px;
+  padding: 7px 10px;
+  color: #a3a8ba;
+  background: rgba(255, 255, 255, 0.04);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+
+.mock-tab.on {
+  color: #e8e8ec;
+  background: rgba(0, 144, 255, 0.4);
+  box-shadow: inset 3px 0 0 0 #0090ff, 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.mock-dock {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  padding-top: 6px;
+  margin-top: auto;
+}
+
+.mock-pill {
+  min-width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.mock-pill.on {
+  background: rgba(0, 144, 255, 0.45);
+  box-shadow: inset 0 0 0 1.5px rgba(0, 144, 255, 0.85);
+}
+
+.mock-pill.p2 { background: rgba(247, 107, 21, 0.18); }
+.mock-pill.p3 { background: rgba(245, 179, 1, 0.18); }
+.mock-pill.plus { opacity: 0.7; }
+
+.mock-key {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(0, 144, 255, 0.12);
+  position: relative;
+  flex: none;
+}
+
+.mock-key::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border-radius: 3px;
+  background: #8e4ec6;
+}
+
+.mock-page {
+  flex: 1;
+  background: #16171e;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 28px;
+  min-width: 0;
+}
+
+.mock-h1 {
+  height: 18px;
+  width: 45%;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.16);
+  margin-bottom: 14px;
+}
+
+.mock-line {
+  height: 10px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 10px;
+}
+
+.mock-line.w90 { width: 90%; }
+.mock-line.w75 { width: 75%; }
+.mock-line.w85 { width: 85%; }
+
+.caption { text-align: center; color: var(--muted); font-size: 14px; margin: 14px 0 0; }
+
+@media (max-width: 640px) {
+  .mock-strip { width: 132px; }
+  .mock-tab { font-size: 11px; }
+  .mock-page { padding: 18px; }
+}
+
 .btn {
   display: inline-block;
   padding: 10px 22px;
